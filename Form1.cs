@@ -21,5 +21,10 @@ namespace ClasesINA
         {
             //comentario
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //esto es un comentario que no esta em git
+        }
     }
 }
