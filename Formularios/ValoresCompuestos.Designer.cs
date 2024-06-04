@@ -41,9 +41,19 @@
             this.btnRegistrarMarca = new System.Windows.Forms.Button();
             this.lblCantidadVehiculos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cbMarcas = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.txtMarcaBuscar = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -90,10 +100,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(61, 130);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(676, 224);
+            this.tabControl1.Size = new System.Drawing.Size(715, 323);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -105,13 +116,18 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(668, 191);
+            this.tabPage1.Size = new System.Drawing.Size(668, 290);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principiante";
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.cbMarcas);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.lblCantidadVehiculos);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.btnRegistrarMarca);
@@ -120,7 +136,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(668, 191);
+            this.tabPage2.Size = new System.Drawing.Size(668, 290);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Avanzado";
             // 
@@ -172,6 +188,94 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Cantidad vehículos";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(322, 109);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 33);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "ASC";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(485, 108);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 33);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "DESC";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(321, 149);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(309, 33);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "COPIAR";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // cbMarcas
+            // 
+            this.cbMarcas.FormattingEnabled = true;
+            this.cbMarcas.Location = new System.Drawing.Point(324, 213);
+            this.cbMarcas.Name = "cbMarcas";
+            this.cbMarcas.Size = new System.Drawing.Size(306, 28);
+            this.cbMarcas.TabIndex = 8;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(384, 247);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(242, 32);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Ver vector";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.txtMarcaBuscar);
+            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(707, 290);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Búsqueda";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(153, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(297, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Cual marca deseas buscar";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(590, 50);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(90, 45);
+            this.button6.TabIndex = 1;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // txtMarcaBuscar
+            // 
+            this.txtMarcaBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarcaBuscar.Location = new System.Drawing.Point(456, 57);
+            this.txtMarcaBuscar.Name = "txtMarcaBuscar";
+            this.txtMarcaBuscar.Size = new System.Drawing.Size(119, 32);
+            this.txtMarcaBuscar.TabIndex = 2;
+            // 
             // ValoresCompuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -186,6 +290,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +310,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCantidadVehiculos;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox cbMarcas;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox txtMarcaBuscar;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label4;
     }
 }

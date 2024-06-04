@@ -16,7 +16,7 @@ namespace ClasesINA.Formularios
         string[] sexo = { "Hombre", "Mujer", "Otro" };
 
         //Arreglo para guardar los carritos
-        string[] marcasCarro = new string[100];//con espacio para albergar 100 marcas
+        string[] marcasCarro = new string[4];//con espacio para albergar 100 marcas
         int contadorMarcasAgregadas = 0;//Es para llevar el control de las marca agregadas
 
 
@@ -57,5 +57,45 @@ namespace ClasesINA.Formularios
             //Limpiamos el cuadro de texto en espera de otra marca
             txtNombreMarca.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //aqui ordenamos el vector de forma asc
+            Array.Sort(marcasCarro);
+            Console.WriteLine(string.Join(",", marcasCarro));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Array.Reverse(marcasCarro);//ordena los valores de forma desc
+            Console.WriteLine(string.Join(",", marcasCarro));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            cbMarcas.Items.Clear();//primero removemos
+            cbMarcas.Items.AddRange(marcasCarro);//luego agregamos
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string marcaBuscar = txtMarcaBuscar.Text;
+            //Preguntamos si lo que está dentro de la variable marca es vacio o nulo
+            if (string.IsNullOrEmpty(marcaBuscar))
+            {   //si es asi, le indicamos que debe registrar una marca
+                MessageBox.Show("Debes ingresar una marca para buscar");
+                txtMarcaBuscar.Focus();//le indicamos al campo que gane el foco
+            }
+            else { //buscamos dentro del array lo que tiene la variable marcasCarro
+                bool existe = Array.Exists(marcasCarro,x =>  x == marcaBuscar);
+                if (existe)//esto es lo mismo que preguntar existe==true
+                {
+                    MessageBox.Show($"La marca {marcaBuscar} si existe");
+                }
+                else {
+                    MessageBox.Show($"La marca {marcaBuscar} no existe");
+                }
+            }
+        }//Finaliza el botón de búsqueda
     }
 } 
