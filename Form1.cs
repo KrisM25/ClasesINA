@@ -40,5 +40,11 @@ namespace ClasesINA
             ValoresCompuestos vc = new ValoresCompuestos();
             vc.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            EstructurasDeControl estructuras = new EstructurasDeControl();
+            estructuras.Show();
+        }
     }
 }

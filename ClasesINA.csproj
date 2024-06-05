@@ -58,6 +58,12 @@
     <Compile Include="Formularios\Constantes.Designer.cs">
       <DependentUpon>Constantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EstructurasDeControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EstructurasDeControl.Designer.cs">
+      <DependentUpon>EstructurasDeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ValoresCompuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Constantes.resx">
       <DependentUpon>Constantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EstructurasDeControl.resx">
+      <DependentUpon>EstructurasDeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ValoresCompuestos.resx">
       <DependentUpon>ValoresCompuestos.cs</DependentUpon>
@@ -100,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\coche.png" />
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
