@@ -146,14 +146,43 @@ namespace ClasesINA.Formularios
         private void label3_Click(object sender, EventArgs e)
         {
             string dia = txtDiaSemana.Text;
+
             if (!dia.Equals("")){//En dado caso que no haya seleccionado un día para eliminarlo
                 //acá abajo preguntamos si desea realmente eliminar el día seleccionado
                 DialogResult opcionUsuario = MessageBox.Show(
-                $"¿Deseas eliminar el día {txtDiaSemana.Text}?",
-                "Advertencia!", MessageBoxButtons.YesNo);
+                $"¿Deseas eliminar el día {txtDiaSemana.Text}?",//mensaje que pregunta
+                "Advertencia!", //este es el título de la ventana
+                MessageBoxButtons.YesNo);//opciones (botones) que salen de la ventana
+
                 switch (opcionUsuario)
                 {
                     case DialogResult.Yes:
+
+                        bool existe = Array.Exists(diasSemana, filtro => filtro.Equals(dia));
+
+                        if (existe)
+                        {
+                            //aqui lo que hago es salvar el ultimo valor del arreglo
+                            string valorTemp = diasSemana[diasSemana.Length - 1];
+                            //obtengo la posición del elemento que quiero quitar:
+                            int posQuitar = Array.IndexOf(diasSemana, dia);
+                            //Aquí reemplazo el valor que quiero quitar, por el ultimo valor que reemplacé
+                            diasSemana[posQuitar] = valorTemp;
+                            //ahora lo que hago es redimensionar el vector para quitar el ultimo element
+                            Array.Resize(ref diasSemana, diasSemana.Length - 1);
+                            //quitamos todas las filas del DataGrid
+                            dtDias.Rows.Clear();
+
+                            foreach (string d in diasSemana)
+                            {
+                                dtDias.Rows.Add(d);
+                            }
+                            //limpiamos el campo de texto para esperar que el usuario pueda seleccionar otro
+                            txtDiaSemana.Text = "";
+                        }
+                        else {
+                            MessageBox.Show($"El día {dia} no se encuentra registrado o fue eliminado");
+                        }
 
                         break;
                     case DialogResult.No:
@@ -162,5 +191,7 @@ namespace ClasesINA.Formularios
                 }
             }
         }
+
+        
     }
 }
