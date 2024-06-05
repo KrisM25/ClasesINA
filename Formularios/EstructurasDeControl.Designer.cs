@@ -39,6 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDiaSemana = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtDias)).BeginInit();
             this.SuspendLayout();
@@ -124,6 +127,7 @@
             this.txtDiaSemana.Name = "txtDiaSemana";
             this.txtDiaSemana.Size = new System.Drawing.Size(127, 20);
             this.txtDiaSemana.TabIndex = 6;
+            this.txtDiaSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiaSemana_KeyPress);
             // 
             // btnGuardar
             // 
@@ -134,6 +138,45 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(312, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 24);
+            this.label4.TabIndex = 9;
+            this.label4.Text = ">";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(274, 242);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 24);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "<";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Image = global::ClasesINA.Properties.Resources.search_engine_optimization;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Location = new System.Drawing.Point(343, 168);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 43);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Buscar";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 
@@ -152,7 +195,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 264);
+            this.ClientSize = new System.Drawing.Size(433, 268);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDiaSemana);
@@ -184,5 +230,8 @@
         private System.Windows.Forms.TextBox txtDiaSemana;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

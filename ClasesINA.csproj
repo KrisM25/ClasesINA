@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\coche.png" />
+    <None Include="Resources\search-engine-optimization.png" />
     <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

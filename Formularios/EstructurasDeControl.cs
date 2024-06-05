@@ -192,6 +192,72 @@ namespace ClasesINA.Formularios
             }
         }
 
-        
+        int contadorClicks = 0;
+        private void label4_Click(object sender, EventArgs e)
+        {
+            if (contadorClicks < diasSemana.Length)
+            {
+                txtDiaSemana.Text = diasSemana.ElementAt(contadorClicks).ToString();
+                contadorClicks++;
+                dtDias.ClearSelection();
+                dtDias.Rows[contadorClicks].Selected = true;
+            }
+            else {
+                //por fuerza le ponemos como valor el ultimo elemento
+                txtDiaSemana.Text = diasSemana[diasSemana.Length - 1];
+            }
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            contadorClicks--;
+            if (contadorClicks > 0)
+            {
+                txtDiaSemana.Text = diasSemana.ElementAt(contadorClicks).ToString();
+                dtDias.ClearSelection();
+                dtDias.Rows[contadorClicks].Selected = true;
+            }
+            else if (contadorClicks == 0) {
+                txtDiaSemana.Text = diasSemana[0];
+                dtDias.ClearSelection();
+                dtDias.Rows[0].Selected = true;
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            string diaBuscar = txtDiaSemana.Text;
+            if (diaBuscar.Equals(""))
+            {
+                MessageBox.Show("Debes escribir un día para buscar", "Información", MessageBoxButtons.OK);
+            }
+            else {
+                bool existe = Array.Exists(diasSemana, filtro => filtro == diaBuscar);
+                if (!existe)
+                {
+                    MessageBox.Show($"El día {diaBuscar} no existe o fue eliminado");
+                }
+                else { 
+                    int pos = Array.IndexOf(diasSemana, diaBuscar);
+                    dtDias.Rows.Clear();
+                    dtDias.Rows.Add(diasSemana[pos]);
+
+                }
+            }
+
+        }
+
+        private void txtDiaSemana_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtDiaSemana.Text.Equals("")) {
+                dtDias.Rows.Clear();
+
+                foreach (string d in diasSemana)
+                {
+                    dtDias.Rows.Add((string)d);
+                }
+            }
+        }
     }
 }
