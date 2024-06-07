@@ -28,29 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Usuario = new MaterialSkin.Controls.MaterialTextBox();
             this.Contraseña = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.Usuario = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
-            // 
-            // Usuario
-            // 
-            this.Usuario.AnimateReadOnly = false;
-            this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Usuario.Depth = 0;
-            this.Usuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Usuario.LeadingIcon = null;
-            this.Usuario.Location = new System.Drawing.Point(272, 95);
-            this.Usuario.MaxLength = 50;
-            this.Usuario.MouseState = MaterialSkin.MouseState.OUT;
-            this.Usuario.Multiline = false;
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(276, 50);
-            this.Usuario.TabIndex = 0;
-            this.Usuario.Text = "";
-            this.Usuario.TrailingIcon = null;
             // 
             // Contraseña
             // 
@@ -60,7 +43,7 @@
             this.Contraseña.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Contraseña.Hint = "Contraseña";
             this.Contraseña.LeadingIcon = null;
-            this.Contraseña.Location = new System.Drawing.Point(272, 151);
+            this.Contraseña.Location = new System.Drawing.Point(263, 165);
             this.Contraseña.MaxLength = 50;
             this.Contraseña.MouseState = MaterialSkin.MouseState.OUT;
             this.Contraseña.Multiline = false;
@@ -78,7 +61,7 @@
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(457, 235);
+            this.materialButton1.Location = new System.Drawing.Point(520, 307);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -96,7 +79,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(456, 286);
+            this.materialLabel1.Location = new System.Drawing.Point(519, 349);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(92, 19);
@@ -104,35 +87,54 @@
             this.materialLabel1.Text = "Crear Cuenta";
             this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
-            // materialTextBox1
+            // Usuario
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.Hint = "Usuario a Crear";
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(272, 95);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(276, 50);
-            this.materialTextBox1.TabIndex = 0;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
+            this.Usuario.AnimateReadOnly = false;
+            this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Usuario.Depth = 0;
+            this.Usuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Usuario.Hint = "Usuario a Crear";
+            this.Usuario.LeadingIcon = null;
+            this.Usuario.Location = new System.Drawing.Point(263, 109);
+            this.Usuario.MaxLength = 50;
+            this.Usuario.MouseState = MaterialSkin.MouseState.OUT;
+            this.Usuario.Multiline = false;
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(276, 50);
+            this.Usuario.TabIndex = 0;
+            this.Usuario.Text = "";
+            this.Usuario.TrailingIcon = null;
+            this.Usuario.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
+            // 
+            // materialTextBox2
+            // 
+            this.materialTextBox2.AnimateReadOnly = false;
+            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox2.Depth = 0;
+            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox2.Hint = "Confirmar Contraseña";
+            this.materialTextBox2.LeadingIcon = null;
+            this.materialTextBox2.Location = new System.Drawing.Point(263, 221);
+            this.materialTextBox2.MaxLength = 50;
+            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox2.Multiline = false;
+            this.materialTextBox2.Name = "materialTextBox2";
+            this.materialTextBox2.Password = true;
+            this.materialTextBox2.Size = new System.Drawing.Size(276, 50);
+            this.materialTextBox2.TabIndex = 4;
+            this.materialTextBox2.Text = "";
+            this.materialTextBox2.TrailingIcon = null;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.materialTextBox2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.materialTextBox1);
-            this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.Usuario);
+            this.Controls.Add(this.Contraseña);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -142,11 +144,10 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialTextBox Usuario;
         private MaterialSkin.Controls.MaterialTextBox Contraseña;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox Usuario;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
     }
 }

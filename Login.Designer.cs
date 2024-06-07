@@ -40,6 +40,7 @@
             this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox1.Depth = 0;
             this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.Hint = "Usuario";
             this.materialTextBox1.LeadingIcon = null;
             this.materialTextBox1.Location = new System.Drawing.Point(277, 88);
             this.materialTextBox1.MaxLength = 50;
@@ -57,6 +58,7 @@
             this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox2.Depth = 0;
             this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox2.Hint = "Contraseña";
             this.materialTextBox2.LeadingIcon = null;
             this.materialTextBox2.Location = new System.Drawing.Point(277, 153);
             this.materialTextBox2.MaxLength = 50;
@@ -75,14 +77,14 @@
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(262, 250);
+            this.materialButton1.Location = new System.Drawing.Point(451, 243);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(158, 36);
+            this.materialButton1.Size = new System.Drawing.Size(91, 36);
             this.materialButton1.TabIndex = 2;
-            this.materialButton1.Text = "materialButton1";
+            this.materialButton1.Text = "Ingresar";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
@@ -92,12 +94,13 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(452, 260);
+            this.materialLabel1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.materialLabel1.Location = new System.Drawing.Point(479, 285);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(107, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(39, 19);
             this.materialLabel1.TabIndex = 3;
-            this.materialLabel1.Text = "materialLabel1";
+            this.materialLabel1.Text = "Inicio";
             // 
             // Login
             // 
@@ -118,7 +121,7 @@
         #endregion
         private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         public MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }
